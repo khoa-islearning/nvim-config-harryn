@@ -5,7 +5,6 @@
 - `d` to create folder
 - `:Explore` to go back to file explorer
 
-![hello.png](hello.png)
 
 ## Set up Lazy:
 1. Create `init.lua`, where nvim will look for next instructions
@@ -43,13 +42,35 @@ Show which keybinding you are using
 Fast fuzzy finder
 
 ### colorscheme-picker
-Easily switch between themes
+Easily switch between themes, fun.
 
 ### lualine, barbar 
-Ignore NVimTree to get better visual
+vscode like visual, won't help much with workflow
 
 ### undotree
-Show file history
+Show file history, not sure how useful.
 
 ### nvim treesitter
-to install language, :TSInstall <language>
+Install parser for different file type, use :TSInstall <filetype> to install parser. Treesitter parser is only for visualization.
+To let nvim understand the syntax, you need LSP.
+
+### LSP, Mason
+This combo enable you to install languages server effortlessly. To summarize, LSP enable nvim to parse file and understand syntax.
+These LSP must be installed outside of nvim, and each are installed differently. To overcome that complication, we can use Mason.
+
+### trouble
+use LSP to show error in your code.
+
+### Conform
+Also combo with Mason, allow nvim to format your code beautifully.
+
+### Competitest
+For competitive programming contest, which I need for school.
+
+### Twilight, ZenMode, Pomo
+For focus session.
+
+### Obsidian, Markdown-viewer
+For note taking
+
+--TODO: add hyperlink
