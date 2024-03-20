@@ -9,7 +9,8 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "bashls", "clangd", "pyright", "zls" },
+        ensure_installed = { "lua_ls", "bashls", "clangd", "pyright", "zls", "tsserver" },
+        auto_install = true,
       })
     end,
   },
@@ -56,6 +57,8 @@ return {
       nvlsp.bashls.setup({})
       --zls : zig
       nvlsp.zls.setup({})
+      --tsserver
+      nvlsp.tsserver.setup({})
     end,
   },
 }

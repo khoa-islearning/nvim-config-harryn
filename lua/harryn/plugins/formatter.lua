@@ -11,7 +11,13 @@ return {
         javascript = { { "prettierd", "prettier" } },
         c = { "clangd_format" },
         cpp = { "clangd_format" },
+        typescript = { { "prettierd", "prettier" } },
       },
+
+      format_on_save= {
+        timeout_ms = 500,
+        lsp_fallback = true,
+      }
     })
 
     vim.api.nvim_create_user_command("Format", function(args)
