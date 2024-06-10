@@ -1,76 +1,45 @@
-# Start Guide
+# README
 
-## Navigate the vanilla Neovim
-- Use `%` to create file
-- `d` to create folder
-- `:Explore` to go back to file explorer
+## About this config
+
+This configuration is based on my usage of nvim, which includes:
+- taking note in markdown
+- competitive programming
+- software development
+As such, this configuration will reflect my personal preferences and habit when editing documents.
+My packages will be installed and managed using [lazy.nvim](https://github.com/folke/lazy.nvim)
+To create your own configuration: view the [start guide linked here](./Config-Start-Guide) 
+
+## Installed Packages:
+
+### Interface
+- [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua): file explorer for neovim, you will need to install a nerdfonts and make your terminal emulator to use the font
+- [fine-cmdline](https://github.com/VonHeikemen/fine-cmdline.nvim): show your neovim command in the middle of the screen, more of an extra feature 
+- [FTerm.nvim](https://github.com/numToStr/FTerm.nvim): basic floating terminal in neovim
+- [lualine](https://github.com/nvim-lualine/lualine.nvim): status line
+
+### LSP related
+- [mason](https://github.com/williamboman/mason.nvim): package manager for everything language-server related, I mainly use for my language server and formatter. Need to install `npm` in order to work. 
+- [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim): vim config for different language, based on file extension 
+- [conform](https://github.com/stevearc/conform.nvim): formatter
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp): completer
+- [lspconfig](https://github.com/neovim/nvim-lspconfig): configs for lsp clients, you will need to install clients via Mason
+- [treesitter](https://github.com/nvim-treesitter/nvim-treesitter): language parser, doesn't actually use lsp clients
+- [trouble](https://github.com/folke/trouble.nvim): show code error
 
 
-## Set up Lazy:
-1. Create `init.lua`, where nvim will look for next instructions
-2. Create `lua` folder
-3. In `init.lua`, require the path to `core` folder. e.g. `require("harryn.core")`
-4. In `lua`, create `harryn\core\` folder
-5. In `core`, create file lazy.lua to bootstrap [lazy](https://github.com/folke/lazy.nvim)
-6. Also create `init.lua` and require "harryn.core.lazy" to bootstrap the bootstrap file
+### Efficiency
+- [nvimsurround](https://github.com/kylechui/nvim-surround): edit surrounding of your selection (such as bracket, quote symbols)
+- [telescope](https://github.com/nvim-telescope/telescope.nvim): fuzzy finder. Find files, keywords...
+- [twilight](https://github.com/folke/twilight.nvim): dimmer so you can focus in your work, use treesitter
+- [zenmode](https://github.com/folke/zen-mode.nvim): zen, not really, but can be helpful
+- [undotree](https://github.com/mbbill/undotree): file history with visualizer
+- [whichkey](https://github.com/folke/which-key.nvim): show you keybinding functions, will help you survive couple first month of neovim
+### Misc
 
-## Setup remaps:
-1. create remap.lua in core to remap leader character
-2. Then we can create shortcut for commands (including plugins commands) in the plugins files
+- [colorscheme-picker](https://github.com/runih/colorscheme-picker.nvim): let switch between themes for neovim 
+- [vim-startuptime](https://github.com/dstein64/vim-startuptime): view startup information
+- [competitest](https://github.com/xeluxee/competitest.nvim): plugins to help you run testcase on your code
+- [pomo](https://github.com/epwalsh/pomo.nvim): pomodoro timer in neovim
 
-## Working with Lazy
-`:Lazy` to open menu
-`:Lazy load <plugin>` to load after install
 
-## Install Plugins
-
-- require `plugins` folder in `lazy.lua`
-- add extensions in `plugins`
-- after adding .lua files, remember to install and load plugins
-
-### [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua):
-prereq: [nvim 0.8 or higher](https://github.com/neovim/neovim/releases)
-- Extra instructions: Remember to download a [patched font](https://www.nerdfonts.com/font-downloads) and [configure](https://stackoverflow.com/questions/2054627/how-do-i-change-tab-size-in-vim) your terminal emulator to use the font.
-
-### [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
-To manage indent size for different languages
-
-### [which-key](https://github.com/folke/which-key.nvim)
-Show which keybinding you are using
-
-### [telescope](https://github.com/nvim-telescope/telescope.nvim)
-Fast fuzzy finder
-
-### colorscheme-picker
-Easily switch between themes, fun.
-
-### lualine, barbar 
-vscode like visual, won't help much with workflow
-
-### undotree
-Show file history, not sure how useful.
-
-### nvim treesitter
-Install parser for different file type, use :TSInstall <filetype> to install parser. Treesitter parser is only for visualization.
-To let nvim understand the syntax, you need LSP.
-
-### LSP, Mason
-This combo enable you to install languages server effortlessly. To summarize, LSP enable nvim to parse file and understand syntax.
-These LSP must be installed outside of nvim, and each are installed differently. To overcome that complication, we can use Mason.
-
-### trouble
-use LSP to show error in your code.
-
-### Conform
-Also combo with Mason, allow nvim to format your code beautifully.
-
-### Competitest
-For competitive programming contest, which I need for school.
-
-### Twilight, ZenMode, Pomo
-For focus session.
-
-### Obsidian, Markdown-viewer
-For note taking
-
---TODO: add hyperlink
