@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "bashls", "clangd", "pyright", "zls", "tsserver" },
+        ensure_installed = { "lua_ls", "bashls", "clangd", "pyright", "zls", "tsserver", "ast_grep" },
         auto_install = true,
       })
     end,
@@ -59,6 +59,44 @@ return {
       nvlsp.zls.setup({})
       --tsserver
       nvlsp.tsserver.setup({})
+
+      nvlsp.cssls.setup({})
+      local configs = require("lspconfig.configs")
+
+      local capabilities = vim.lsp.protocol.make_client_capabilities()
+      capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+      if not configs.ls_emmet then
+        configs.ls_emmet = {
+          default_config = {
+            cmd = { "ls_emmet", "--stdio" },
+            filetypes = {
+              "html",
+              "css",
+              "scss",
+              "javascriptreact",
+              "typescriptreact",
+              "haml",
+              "xml",
+              "xsl",
+              "pug",
+              "slim",
+              "sass",
+              "stylus",
+              "less",
+              "sss",
+              "hbs",
+              "handlebars",
+            },
+            root_dir = function(fname)
+              return vim.loop.cwd()
+            end,
+            settings = {},
+          },
+        }
+      end
+
+      nvlsp.ls_emmet.setup({ capabilities = capabilities })
     end,
   },
 }
