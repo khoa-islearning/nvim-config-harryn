@@ -7,6 +7,8 @@ local M = {
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-cmdline",
     "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-vsnip",
+    "hrsh7th/vim-vsnip",
   },
 }
 
@@ -31,13 +33,13 @@ M.config = function()
       ["<C-f>"] = cmp.mapping.scroll_docs(4),
       ["<C-Space>"] = cmp.mapping.complete(),
       ["jj"] = cmp.mapping.abort(),
-      ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), {'i', 'c'}),
-      ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), {'i', 'c'}),
+      ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
+      ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
       ["<Tab>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = cmp.config.sources({
       { name = "nvim_lsp" },
-      -- { name = 'vsnip' }, -- For vsnip users.
+      { name = "vsnip" }, -- For vsnip users.
       -- { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
@@ -62,7 +64,6 @@ M.config = function()
       { name = "buffer" },
     },
   })
-
 
   cmp.setup.cmdline(":", {
     mapping = cmp.mapping.preset.cmdline(),
@@ -89,6 +90,14 @@ M.config = function()
   })
 
   require("lspconfig")["lua_ls"].setup({
+    capabilities = capabilities,
+  })
+
+  require("lspconfig")["cssls"].setup({
+    capabilities = capabilities,
+  })
+
+  require("lspconfig")["tsserver"].setup({
     capabilities = capabilities,
   })
 end
