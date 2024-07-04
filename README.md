@@ -8,7 +8,7 @@ This configuration is based on my usage of nvim, which includes:
 - software development
 As such, this configuration will reflect my personal preferences and habit when editing documents.
 My packages will be installed and managed using [lazy.nvim](https://github.com/folke/lazy.nvim)
-To create your own configuration: view the [start guide linked here](./Config-Start-Guide) 
+To create your own configuration: view the [start guide linked here](./Config-Start-Guide.md) 
 
 ## Installed Packages:
 
