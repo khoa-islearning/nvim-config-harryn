@@ -59,6 +59,8 @@ return {
       nvlsp.zls.setup({})
       --tsserver
       nvlsp.tsserver.setup({})
+      nvlsp.tailwindcss.setup({})
+      nvlsp.somesass_ls.setup({})
 
       nvlsp.cssls.setup({})
       local configs = require("lspconfig.configs")
