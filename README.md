@@ -10,6 +10,11 @@ As such, this configuration will reflect my personal preferences and habit when 
 My packages will be installed and managed using [lazy.nvim](https://github.com/folke/lazy.nvim)
 To create your own configuration: view the [start guide linked here](./Config-Start-Guide.md) 
 
+## Requirements:
+- emmet_ls
+- nvm to install npm
+- python3 and pip
+
 ## Installed Packages:
 
 ### Interface
