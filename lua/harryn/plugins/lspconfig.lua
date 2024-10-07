@@ -66,6 +66,8 @@ return {
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+      -- NOTE: pedro757/emmet not maintained in a while, might need to replace
+      -- npm install -g ls_emmet
       if not configs.ls_emmet then
         configs.ls_emmet = {
           default_config = {
