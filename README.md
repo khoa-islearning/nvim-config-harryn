@@ -11,9 +11,9 @@ My packages will be installed and managed using [lazy.nvim](https://github.com/f
 To create your own configuration: view the [start guide linked here](./Config-Start-Guide.md) 
 
 ## Requirements:
-- emmet_ls
-- nvm to install npm
-- python3 and pip
+- [emmet](https://github.com/pedro757/emmet) for web dev snippets
+- [nvm](https://github.com/nvm-sh/nvm) then `npm`
+- `python3` and `pip`
 
 ## Installed Packages:
 
@@ -40,6 +40,7 @@ To create your own configuration: view the [start guide linked here](./Config-St
 - [zenmode](https://github.com/folke/zen-mode.nvim): zen, not really, but can be helpful
 - [undotree](https://github.com/mbbill/undotree): file history with visualizer
 - [whichkey](https://github.com/folke/which-key.nvim): show you keybinding functions, will help you survive couple first month of neovim
+
 ### Misc
 
 - [colorscheme-picker](https://github.com/runih/colorscheme-picker.nvim): let switch between themes for neovim 

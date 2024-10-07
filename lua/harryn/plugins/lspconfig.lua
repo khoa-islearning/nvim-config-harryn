@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "bashls", "clangd", "pyright", "zls", "tsserver", "ast_grep" },
+        ensure_installed = { "lua_ls", "bashls", "clangd", "pyright", "zls", "tsserver", "ast_grep", "tailwindcss", "somesass_ls", "cssls" },
         auto_install = true,
       })
     end,
@@ -61,7 +61,6 @@ return {
       nvlsp.tsserver.setup({})
       nvlsp.tailwindcss.setup({})
       nvlsp.somesass_ls.setup({})
-
       nvlsp.cssls.setup({})
       local configs = require("lspconfig.configs")
 
