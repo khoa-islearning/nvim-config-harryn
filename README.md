@@ -13,6 +13,7 @@ To create your own configuration: view the [start guide linked here](./Config-St
 ## Requirements:
 - [emmet](https://github.com/pedro757/emmet) for web dev snippets
 - [nvm](https://github.com/nvm-sh/nvm) then `npm`
+- [ripgrep](https://github.com/BurntSushi/ripgrep) for `live_grep` functionality of `telescope.nvim`
 - `python3` and `pip`
 
 ## Installed Packages:

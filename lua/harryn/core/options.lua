@@ -1,6 +1,6 @@
 local opt = vim.opt
 
--- turn off warp line
+-- turn on warp line
 opt.wrap = false
 
 -- line numbers
@@ -10,12 +10,12 @@ opt.number = true
 -- tab & indentation
 opt.tabstop = 4
 opt.shiftwidth = 4
-opt.expandtab = true 	-- expand tabs to spaces
-opt.autoindent = true 	-- copy indent from prev line
+opt.expandtab = true  -- expand tabs to spaces
+opt.autoindent = true -- copy indent from prev line
 
 -- search settings
 opt.ignorecase = true -- ignorecase when searching
-opt.smartcase = true -- if mixed case, use case-sensitive
+opt.smartcase = true  -- if mixed case, use case-sensitive
 
 -- cursore line
 opt.cursorline = false
