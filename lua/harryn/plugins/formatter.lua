@@ -14,6 +14,7 @@ return {
         typescript = { { "prettierd", "prettier" } },
         typescriptreact = { { "prettierd", "prettier" } },
         css = { { "prettierd", "prettier" } },
+        json = { { "fixjson" } },
       },
 
       format_on_save = {
