@@ -21,11 +21,20 @@ return {
         width = 30,
       },
       renderer = {
-        group_empty = true,
+        group_empty = false,
+        icons = {
+          show = {
+            modified = true,
+          },
+        },
+      },
+      modified = {
+        enable = true,
       },
       filters = {
-        dotfiles = false,
-        git_ignored = false,
+        enable = false,
+        -- dotfiles = false,
+        -- git_ignored = false,
       },
     })
     -- REMAP
